@@ -1,0 +1,38 @@
+#############################
+# Syntax Coloring Map For LCD
+#############################
+
+#############################
+# Datatypes (KEYWORD3)
+#############################
+
+LCD	KEYWORD3
+lcd	KEYWORD3
+
+#############################
+# Methods and Functions (KEYWORD2)
+#############################
+
+Dat	KEYWORD2
+Cmd	KEYWORD2
+Init1	KEYWORD2
+Init2	KEYWORD2
+Msg	KEYWORD2
+
+#############################
+# Constants (LITERAL1)
+#############################
+
+HOME	LITERAL1
+FSET	LITERAL1
+FSET2	LITERAL1
+CLS	LITERAL1
+ENTRY	LITERAL1
+SCROL	LITERAL1
+OFF	LITERAL1
+ON	LITERAL1
+CURS	LITERAL1
+LINE1	LITERAL1
+LINE2	LITERAL1
+RIGHT	LITERAL1
+LEFT	LITERAL1
