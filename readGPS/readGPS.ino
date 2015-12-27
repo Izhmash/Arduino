@@ -16,16 +16,16 @@ char data[BUFFSIZE];
 
 void setup() {
   Serial.begin(9600);
-  Serial1.begin(115200);
+  Serial2.begin(115200);
 }
 
 void loop() {
-  /*while (Serial1.available()) {
-    data += Serial1.read();
+  /*while (Serial2.available()) {
+    data += Serial2.read();
   }*/
   
   for (int i = 0; i < BUFFSIZE; i++) {
-    char c = Serial1.read();
+    char c = Serial2.read();
     if (c == -1 || c == '\n') {
       continue;
     }
@@ -46,7 +46,7 @@ void loop() {
   
   buffidx = 0; // start at begninning
   while (1) {
-    c = Serial1.read();
+    c = Serial2.read();
     if (c == -1)
       continue;
     Serial.print(c);
