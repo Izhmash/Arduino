@@ -14,12 +14,14 @@ char data[BUFFSIZE];
 //char *parseptr;
 //char buffidx;
 
-void setup() {
+void setup() 
+{
   Serial.begin(9600);
   Serial2.begin(115200);
 }
 
-void loop() {
+void loop() 
+{
   /*while (Serial2.available()) {
     data += Serial2.read();
   }*/
