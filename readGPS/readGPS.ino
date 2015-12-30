@@ -1,9 +1,6 @@
 #define BUFFSIZE  90
 
 void readLine(void);
-char data[BUFFSIZE];
-
-
 
 //#define GPSRATE 9600
 //#define GPSRATE 38400
@@ -16,23 +13,24 @@ char data[BUFFSIZE];
 
 void setup() 
 {
-  Serial.begin(9600);
-  Serial2.begin(115200);
+  Serial.begin(115200);
+  Serial1.begin(115200);
 }
 
 void loop() 
 {
+  char data[BUFFSIZE];
   /*while (Serial2.available()) {
     data += Serial2.read();
   }*/
-  
+  //while (Serial2.read() != '\r');
   for (int i = 0; i < BUFFSIZE; i++) {
-    char c = Serial2.read();
+    char c = Serial1.read();
     if (c == -1 || c == '\n') {
       continue;
     }
     if (c == '\r') {
-      continue;
+      return;
     }
     data[i] = c;
   }
