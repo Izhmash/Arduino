@@ -2,7 +2,6 @@
 
 #define BUFFSIZE  90
 //char* data;
-int buffInc;
 
 void displayGPSData(void);
 
@@ -21,7 +20,6 @@ void loop()
 
 void displayGPSData(void)
 {
-  buffInc = 0;
   while (1) {
     int i = 0;
     char c = Serial1.read();
