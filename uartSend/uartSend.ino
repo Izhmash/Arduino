@@ -1,15 +1,11 @@
 void setup() 
 {
-  Serial1.begin(9600);
+  Serial3.begin(115200);
 }
 
-int value = 48;
 void loop() 
 {
-  Serial1.write(value);
-  ++value;
-  if (value == 58) {
-    value = 48;
-  }
+  Serial3.read();
+  Serial3.write('A');
   delay(1000);
 }
